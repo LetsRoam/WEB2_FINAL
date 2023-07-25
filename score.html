@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FINAL PROJECT</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+			async
+			defer></script>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	</head>
+
+	<body>
+		<header class="sticky-header">
+			<div class="container">
+				<h2>
+					<a href="#" class="logo"><sup>WEB</sup> PROJECT</a>
+				</h2>
+				<nav>
+					<ul class="menu">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="score.html">SCORE</a></li>
+						<li><a href="shop.html">SHOP</a></li>
+						<li><a href="jsworld.html">JS WORLD</a></li>
+						<li><a href="map.html">MAP</a></li>
+						<li><a href="anime.html">ANIMATION</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="hero" id="hero-section">
+			<img
+				src="LEFT SIDE ARROW.png"
+				alt="Left Arrow"
+				class="arrow left-arrow"
+				onclick="changeBackgroundImage(-1)" />
+			<div class="hero-content">
+				<h1>THIS IS WEB 2 PROJECT.</h1>
+				<p>!!! WELCOME TO THE WEBSITE !!!</p>
+				<a href="about.html" class="btn">HELLO GUYS</a>
+			</div>
+			<img
+				src="RIGHT SIDE ARROW.png"
+				alt="Right Arrow"
+				class="arrow right-arrow"
+				onclick="changeBackgroundImage(1)" />
+		</section>
+
+		<section class="score-section">
+			<div class="score-container">
+				<h1>STUDENT RECORD</h1>
+				<div class="total-student">
+					<h4>
+						There are <span id="totalStudents"></span> students. Their scores
+						are as follows:
+					</h4>
+					<div class="student-scores" id="StudentScores"></div>
+				</div>
+
+				<div class="student-above">
+					<h4>The following students are students who can get A:</h4>
+					<div class="students-above-90" id="studentsAbove90"></div>
+				</div>
+
+				<div class="total-score">
+					<p>Total score is <span id="totalScore"></span>.</p>
+					<p>The average score is <span id="averageScore"></span>.</p>
+				</div>
+
+				<div class="sorted-student-scores">
+					<h4>Sort scores in descending order:</h4>
+					<div id="sortedStudentScores"></div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="footer-container">
+				<div class="left-section">
+					<h3>ABOUT ME</h3>
+					<p>
+						My name is Anil Shrestha, and I aspire to be a software developer.
+						Ever since I was introduced to the world of computers, I've been
+						captivated by the art of coding and its limitless possibilities.
+					</p>
+				</div>
+				<div class="middle-section">
+					<h3>CONTACT INFO</h3>
+					<ul>
+						<li><i class="fa fa-phone"></i> Phone: 123-456-7890</li>
+						<li><i class="fa fa-envelope"></i> Email: example@example.com</li>
+						<li>
+							<i class="fa fa-map-marker"></i> Address: 123 Street, City,
+							Country
+						</li>
+					</ul>
+				</div>
+				<div class="right-section">
+					<h3>LINKS</h3>
+					<ul>
+						<li>
+							<a href="#">LINK</a>
+						</li>
+						<li>
+							<a href="#">LINK</a>
+						</li>
+						<li>
+							<a href="#">LINK</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright">
+				<hr />
+				<p>&copy; 2023 Kyoto City. All rights reserved By Group 21.</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FINAL PROJECT</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+
+		<!-- Add this script in the <head> section or just before the closing </body> tag -->
+
+		<script>
+			function validateForm() {
+				const name = document.forms["fm"]["name"].value;
+				const age = document.forms["fm"]["age"].value;
+				const tel = document.forms["fm"]["tel"].value;
+				const mail = document.forms["fm"]["mail"].value;
+				const validationMessage = document.getElementById("validationMessage");
+
+				// Regular expressions for validation
+				const nameRegex = /^[A-Za-z\s]+$/;
+				const ageRegex = /^(0?[1-9]|[1-9][0-9]|[1][0-1][0-9]|120)$/;
+				const telRegex = /^\d{10}$/;
+				const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+
+				// Reset validation message
+				validationMessage.innerHTML = "";
+
+				if (!nameRegex.test(name)) {
+					validationMessage.innerHTML += "Please enter a valid name.<br />";
+					return false;
+				}
+
+				if (!ageRegex.test(age)) {
+					validationMessage.innerHTML +=
+						"Please enter a valid age (between 1 and 100).<br />";
+					return false;
+				}
+
+				if (!telRegex.test(tel)) {
+					validationMessage.innerHTML +=
+						"Please enter a valid telephone number (10 digits).<br />";
+					return false;
+				}
+
+				if (!emailRegex.test(mail)) {
+					validationMessage.innerHTML +=
+						"Please enter a valid email address.<br />";
+					return false;
+				}
+
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<header class="sticky-header">
+			<div class="container">
+				<h2>
+					<a href="#" class="logo"><sup>WEB</sup> PROJECT</a>
+				</h2>
+				<nav>
+					<ul class="menu">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="score.html">SCORE</a></li>
+						<li><a href="shop.html">SHOP</a></li>
+						<li><a href="jsworld.html">JS WORLD</a></li>
+						<li><a href="map.html">MAP</a></li>
+						<li><a href="anime.html">ANIMATION</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="hero" id="hero-section">
+			<img
+				src="LEFT SIDE ARROW.png"
+				alt="Left Arrow"
+				class="arrow left-arrow"
+				onclick="changeBackgroundImage(-1)" />
+			<div class="hero-content">
+				<h1>THIS IS WEB 2 PROJECT.</h1>
+				<p>!!! WELCOME TO THE WEBSITE !!!</p>
+				<a href="about.html" class="btn">HELLO GUYS</a>
+			</div>
+			<img
+				src="RIGHT SIDE ARROW.png"
+				alt="Right Arrow"
+				class="arrow right-arrow"
+				onclick="changeBackgroundImage(1)" />
+		</section>
+
+		<section class="contact">
+			<div class="contact-container" style="height: 600px">
+				<h1>Membership Application form</h1>
+				<form name="fm" onsubmit="return validateForm()">
+					<div class="form-row">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" />
+					</div>
+
+					<div class="form-row">
+						<label for="age">Age:</label>
+						<input type="age" id="age" name="age" />
+					</div>
+
+					<div class="form-row">
+						<label for="tel">Telephone No.:</label>
+						<input type="tel" id="tel" name="tel" />
+					</div>
+
+					<div class="form-row">
+						<label for="mail">E-mail:</label>
+						<input type="email" id="mail" name="mail" size="20" />
+					</div>
+
+					<div class="validation-message" id="validationMessage"></div>
+
+					<div style="text-align: center">
+						<input type="submit" value="Submit" />
+						<input type="reset" value="Clear" />
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<footer>
+			<div class="footer-container">
+				<div class="left-section">
+					<h3>ABOUT ME</h3>
+					<p>
+						My name is Anil Shrestha, and I aspire to be a software developer.
+						Ever since I was introduced to the world of computers, I've been
+						captivated by the art of coding and its limitless possibilities.
+					</p>
+				</div>
+				<div class="middle-section">
+					<h3>CONTACT INFO</h3>
+					<ul>
+						<li><i class="fa fa-phone"></i> Phone: 123-456-7890</li>
+						<li><i class="fa fa-envelope"></i> Email: example@example.com</li>
+						<li>
+							<i class="fa fa-map-marker"></i> Address: 123 Street, City,
+							Country
+						</li>
+					</ul>
+				</div>
+				<div class="right-section">
+					<h3>LINKS</h3>
+					<ul>
+						<li>
+							<a href="#">LINK</a>
+						</li>
+						<li>
+							<a href="#">LINK</a>
+						</li>
+						<li>
+							<a href="#">LINK</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright">
+				<hr />
+				<p>&copy; 2023 Kyoto City. All rights reserved By Group 21.</p>
+			</div>
+		</footer>
+	</body>
+</html>
